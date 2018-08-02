@@ -14,6 +14,7 @@ module.exports = async (req, res) => {
 		unknown: 'polyfill'
 	});
 
+	res.setHeader('Access-Control-Allow-Origin', '*')
 	res.setHeader('Content-Type', 'application/javascript;charset=utf-8');
 	res.setHeader('Content-Length', script.length);
 
