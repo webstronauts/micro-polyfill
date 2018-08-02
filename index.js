@@ -18,8 +18,10 @@ module.exports = async (req, res) => {
 	res.setHeader('Content-Type', 'application/javascript;charset=utf-8');
 	res.setHeader('Content-Length', script.length);
 
-	// Cache all front-end assets for at least a year.
-	res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+	if (process.env.NODE_ENV ==='production') {
+		// Cache all front-end assets for at least a year.
+		res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+	}
 
 	res.write(script);
 	res.end();
