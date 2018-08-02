@@ -1,0 +1,31 @@
+{
+  "name": "micro-polyfill",
+  "version": "0.1.0",
+  "description": "A tiny Node.js microservice for automatic polyfills.",
+  "license": "MIT",
+  "author": "Robin van der Vleuten <robin@webstronauts.co>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webstronauts/micro-polyfill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webstronauts/micro-polyfill/issues"
+  },
+  "homepage": "https://github.com/webstronauts/micro-polyfill#readme",
+  "main": "index.js",
+  "scripts": {
+    "dev": "micro-dev",
+    "release": "standard-version",
+    "start": "micro",
+    "test": "xo"
+  },
+  "dependencies": {
+    "micro": "9.3.2",
+    "polyfill-service": "3.25.1"
+  },
+  "devDependencies": {
+    "micro-dev": "^3.0.0",
+    "standard-version": "^4.4.0",
+    "xo": "^0.21.1"
+  }
+}
